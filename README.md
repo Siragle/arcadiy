@@ -1,2 +1,1 @@
 # arcadiy
-Interactive arachnoboard
