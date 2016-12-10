@@ -23,6 +23,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'store.apps.StoreConfig',
     'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -71,7 +72,7 @@ WSGI_APPLICATION = 'arcadiy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'userdb',
+        'NAME': 'arcadiy',
         'USER': 'mysql',
         'PASSWORD': 'request',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
