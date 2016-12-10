@@ -11,14 +11,15 @@ from django.utils import timezone
 
 
 class Users(models.Model):
-	login = models.CharField(max_length=20)
-	password = models.CharField(max_length=20)
-	pub_date = models.DateTimeField('date published')
+	def __init___(self, login, password, pub_date):
+		self.login = models.CharField(max_length=20)
+		self.password = models.CharField(max_length=20)
+		self.pub_date = models.DateTimeField('date published')
 
 	def __str__(self):
 		return self.login + ' ' + self.password + ' ' + str(self.pub_date)
 
 	def was_published_recently(self):
 		return self.pub_date >= timezone.now() - datetime.timdelta(days=1)
-#class Admin(models.Model):
+
 
