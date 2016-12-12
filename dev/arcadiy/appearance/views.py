@@ -1,7 +1,8 @@
-# from django.shortcuts import render
-# from django.http import	HttpResponse
+import re
 
-# def index(request):
-# 	index_page = open('index.html')
-# 	return HttpResponse(index_page)	
-# 	index_page.close()
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
+
+def index(request):
+	return render_to_response('index_template.html')

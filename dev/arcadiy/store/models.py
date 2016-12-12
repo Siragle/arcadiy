@@ -13,12 +13,13 @@ from django.utils import timezone
 #ADMIN = os.()
 
 class Product(models.Model):
-	# def __init__(self, id, name, description, img, pub_date, product_seller, price=0, is_sold=False):
 	name = models.CharField(max_length=40)
 	description = models.CharField(max_length=150)
 	pub_date = models.DateTimeField('date published')
-	# is_sold = False
-#	product_seller = ADMIN
+	is_sold = models.BooleanField(default=False)
+	price = models.CharField(max_length=1000)
+	product_seller = models.CharField(default='ADMIN', max_length=20)
+
 
 	def __str__(self):
 		return self.id + ' ' + self.pub_date
@@ -31,3 +32,4 @@ class Product(models.Model):
 
 	#def post_product(self):
 	#def delete(self):
+	

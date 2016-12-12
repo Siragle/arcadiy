@@ -20,4 +20,3 @@ class User(models.Model):
 	def was_published_recently(self):
 		return self.registered_date >= timezone.now() - datetime.timdelta(days=1)
 
-
