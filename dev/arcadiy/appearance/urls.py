@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from django.contrib import admin
-from . import views
+from django.views.generic import TemplateView
+from appearance.views import MainView, ContactView
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    
 ]

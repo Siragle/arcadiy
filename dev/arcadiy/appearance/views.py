@@ -1,8 +1,9 @@
-import re
-
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.views.generic import TemplateView
 
-def index(request):
-	return render_to_response('index_template.html')
+class MainView(TemplateView):
+	template_name = "index.html"
+
+class ContactView(TemplateView):
+	template_name = "contact.html"
